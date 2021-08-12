@@ -52,7 +52,8 @@ namespace SF.Tests
             Holiday ascentionDay = holidays.SingleOrDefault(h => h.LocalName == "Hemelvaartsdag");
             Assert.IsNotNull(ascentionDay, "Ascention day is not present in the list");
 
-            Assert.AreEqual(DayOfWeek.Thursday, ascentionDay.Date.DayOfWeek);
+            Assert.AreEqual(DayOfWeek.Thursday, ascentionDay.Date.DayOfWeek,
+                "Ascention day is not on Thursday");
         }
     }
 }
